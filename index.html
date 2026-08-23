@@ -452,6 +452,93 @@
     letter-spacing: 0.04em;
   }
 
+  /* STAT COMPARISON BAR */
+  .stat-compare {
+    background: rgba(196,149,106,0.08);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.5rem 1.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .stat-compare-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .stat-compare-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .stat-compare-sub {
+    font-size: 12px;
+    color: var(--mid);
+  }
+
+  .stat-compare-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .stat-compare-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-compare-values {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .stat-compare-before {
+    font-size: 0.95rem;
+    color: var(--mid);
+  }
+
+  .stat-compare-arrow {
+    font-size: 0.85rem;
+    color: var(--mid);
+  }
+
+  .stat-compare-after {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--charcoal);
+  }
+
+  .stat-compare-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 500;
+    color: white;
+    background: var(--accent);
+    padding: 3px 10px;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 768px) {
+    .stat-compare-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
   .case-link {
     display: inline-block;
     margin-top: 1rem;
@@ -699,8 +786,8 @@
           <div class="stat-desc">LinkedIn ER sustained for Franklin University vs. 2–5% benchmark</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">158%</div>
-          <div class="stat-desc">Of organic Story View benchmark Ferrero Squares launch</div>
+          <div class="stat-num">4.4&times;</div>
+          <div class="stat-desc">Engagement rate lift for Proof Experiences, from 6.8% to 30%</div>
         </div>
         <div class="stat-item">
           <div class="stat-num">500K+</div>
@@ -823,19 +910,53 @@
         </div>
         <div class="case-body">
           <p class="case-section-head">The challenge</p>
-          <p class="case-text">Proof Experiences already had a LinkedIn presence, but wanted to increase posting cadence and engagement, and translate agency work into content that speaks directly to senior marketing and business development audiences &mdash; the people making partner decisions.</p>
+          <p class="case-text">Proof Experiences wanted to improve their LinkedIn and Instagram presence &mdash; increasing engagement and translating agency work into content that speaks directly to senior marketing and business development audiences.</p>
           <p class="case-section-head">My role</p>
-          <p class="case-text">Took the lead on Proof&rsquo;s content calendar starting June 2026 &mdash; writing, editing, and publishing an insight-led format that leads with a point of view, then proves it with the work.</p>
+          <p class="case-text">Managed Proof&rsquo;s content calendar starting June 2026 &mdash; writing, editing, and publishing insight-led posts that open with a point of view backed by the work.</p>
           <p class="case-section-head">The approach</p>
-          <p class="case-text">Shifted the account from recap-style announcements to case studies that open with tension or a clear POV before showing outcomes. Nearly tripled posting cadence and prioritized reach among decision-makers over raw volume.</p>
-          <div class="case-stats">
-            <div>
-              <div class="case-stat-val">13,073</div>
-              <div class="case-stat-label">Impressions across 15 posts in the first 9 weeks &mdash; +66% in July vs. June</div>
+          <p class="case-text">Shifted the account from recap-style announcements to case studies that open with tension or a clear point of view before showing outcomes.</p>
+          <div class="stat-compare">
+            <div class="stat-compare-head">
+              <span class="stat-compare-title">Versus the first half of the year</span>
+              <span class="stat-compare-sub">Monthly averages, before the new strategy vs. now</span>
             </div>
-            <div>
-              <div class="case-stat-val">30%</div>
-              <div class="case-stat-label">Blended engagement rate &mdash; up from a 6.8% pre-strategy baseline</div>
+            <div class="stat-compare-grid">
+              <div>
+                <div class="stat-compare-label">Posts per month</div>
+                <div class="stat-compare-values">
+                  <span class="stat-compare-before">2.5</span>
+                  <span class="stat-compare-arrow">&rarr;</span>
+                  <span class="stat-compare-after">6.8</span>
+                </div>
+                <span class="stat-compare-badge">2.7&times; cadence</span>
+              </div>
+              <div>
+                <div class="stat-compare-label">Impressions per month</div>
+                <div class="stat-compare-values">
+                  <span class="stat-compare-before">4,800</span>
+                  <span class="stat-compare-arrow">&rarr;</span>
+                  <span class="stat-compare-after">6,800</span>
+                </div>
+                <span class="stat-compare-badge">+42% reach</span>
+              </div>
+              <div>
+                <div class="stat-compare-label">Engagement rate</div>
+                <div class="stat-compare-values">
+                  <span class="stat-compare-before">6.8%</span>
+                  <span class="stat-compare-arrow">&rarr;</span>
+                  <span class="stat-compare-after">30%</span>
+                </div>
+                <span class="stat-compare-badge">4.4&times; rate</span>
+              </div>
+              <div>
+                <div class="stat-compare-label">Interactions per month</div>
+                <div class="stat-compare-values">
+                  <span class="stat-compare-before">325</span>
+                  <span class="stat-compare-arrow">&rarr;</span>
+                  <span class="stat-compare-after">2,040</span>
+                </div>
+                <span class="stat-compare-badge">~6&times; engagement</span>
+              </div>
             </div>
           </div>
         <div style="display:flex;gap:0.75rem;margin-top:1.5rem;max-width:400px;">
@@ -967,7 +1088,7 @@
   <section class="content-section" id="content">
     <p class="section-label">Personal content creation</p>
     <h2 class="section-title">Off Route Diaries</h2>
-    <p style="font-size:14px; color:var(--mid); max-width:600px; margin-bottom:2rem;">Personal travel content shot and edited on mobile across Southeast Asia. Built organically from scratch, garnering 500K+ impressions. Below are some examples of my approach to visual storytelling and short-form video editing.</p>
+    <p style="font-size:14px; color:var(--mid); max-width:600px; margin-bottom:2rem;">Personal travel content shot and edited on mobile across Southeast Asia. Built organically from scratch, garnering 500K+ impressions. Below are some examples of my approach to visual storytelling and short-form video editing &mdash; including a new piece filmed closer to home in Georgian Bay, Ontario.</p>
 
     <div class="tiktok-grid">
       <a href="https://www.tiktok.com/@offroutediaries/video/7483721042129734918" target="_blank" class="tiktok-card">
